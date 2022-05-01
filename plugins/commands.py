@@ -66,8 +66,7 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/ErrorXbotz')
+                        InlineKeyboardButton('🔎 Cari Anime', switch_inline_query_current_chat='')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -97,18 +96,14 @@ async def start(bot, cmd):
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Source Code", url='https://github.com/Jinn-Of-Telegram/Media-Search-bot-v2'),
-                    ],
-                   [
-                       InlineKeyboardButton("Update Channel", url='https://t.me/ErrorXbotz'),
-                       InlineKeyboardButton("Support Group", url='https://t.me/ErrorXsupport'),
-                    ],
-                     [
-                        InlineKeyboardButton("About", callback_data="about")
-                    ]
+                [            [
+            InlineKeyboardButton('🔎 Cari Anime', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🔗 Bagikan Bot', switch_inline_query=''),
+            ],
+            [
+            InlineKeyboardButton("❓ Tutorial", callback_data="about"),
+            InlineKeyboardButton("🗣 Channel", url='https://t.me/gawrproject'),
+            ]
                 ]
             )
         )
@@ -192,12 +187,11 @@ async def delete(bot, message):
         await msg.edit('File is successfully deleted from database')
     else:
         await msg.edit('File not found in database')
-@Client.on_message(filters.command('about'))
+@Client.on_message(filters.command('help'))
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton('Update Channel', url='https://t.me/ErrorXbotz'),
-            InlineKeyboardButton('Source Code', url='https://github.com/Jinn-Of-Telegram/Media-Search-bot-v2')
+            InlineKeyboardButton('📝 Lapor Bug / Req Anime', url='https://t.me/Assistant_09474783bot')
         ]
         ]
-    await message.reply(text="<b>Developer : <a href='https://t.me/Jinn_007'>꧁Ⓜⓤⓣⓗⓐⓛⓘⓑ_★࿐</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/Jinn-Of-Telegram/Media-Search-bot-V2'>Click here</a>\nUpdate Channel : <a href='https://t.me/ErrorXBotz'>ErrorXBotz</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply(text="<b>Cara Pencarian:</b>\n\n➤ Gunakan kata kunci untuk mempermudah pencarian: kata kunci [search query]. Contoh: Nekopoi boku.\n\n➤ kata kunci: Nekopoi, HH, Sakuracircle, sangen rips.\n\n➤ Jika pas mencari pakai kata kunci tidak ditemukan, maka tulis judulnya saja langsung di pencariannya.\n\n<b>Catatan:</b> Kalian bisa menekan tombol di bawah jika kalian menemukan bug atau mau request anime.", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
