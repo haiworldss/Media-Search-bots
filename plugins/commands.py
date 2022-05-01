@@ -66,7 +66,8 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🔎 Cari Anime', switch_inline_query_current_chat='')
+                        InlineKeyboardButton('🔎 Cari Lagi', switch_inline_query_current_chat=query),
+                        InlineKeyboardButton('🔗 Bagikan Bot', switch_inline_query=''),
                     ]
                     ]
                 await bot.send_cached_media(
