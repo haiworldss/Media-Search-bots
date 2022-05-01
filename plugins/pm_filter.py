@@ -286,10 +286,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/ErrorXbotz'),
+                  InlineKeyboardButton('📝 Lapor Bug / Req Anime', url='https://t.me/Assistant_09474783bot'),
                 ]
                 ]
-            await query.message.edit(text="<b>Developer : <a href='https://t.me/Jinn_007'>꧁Ⓜⓤⓣⓗⓐⓛⓘⓑ_★࿐</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\n Update Channel : <a href='https://t.me/ErrorXBotz'>ErrorXBotz</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="<b>Cara Pencarian:</b>\n\n➤ Gunakan kata kunci untuk mempermudah pencarian: kata kunci [search query]. Contoh: Nekopoi boku.\n\n➤ kata kunci: Nekopoi, HH, Sakuracircle, sangen rips.\n\n➤ Jika pas mencari pakai kata kunci tidak ditemukan, maka tulis judulnya saja langsung di pencariannya.\n\n<b>Catatan:</b> Kalian bisa menekan tombol di bawah jika kalian menemukan bug atau mau request anime.", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
 
