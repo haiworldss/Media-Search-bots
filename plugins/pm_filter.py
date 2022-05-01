@@ -310,7 +310,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                     InlineKeyboardButton('📥 More Bots 📥', url='https://t.me/ErrorXBotz'),
+                        InlineKeyboardButton('🔗 Bagikan Bot', switch_inline_query=''),
                     ]
                     ]
                 
@@ -341,7 +341,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('📥 More Bots 📥', url='https://t.me/ErrorXBotz'),
+                        InlineKeyboardButton('🔗 Bagikan Bot', switch_inline_query=''),
                     ]
                     ]
                 
