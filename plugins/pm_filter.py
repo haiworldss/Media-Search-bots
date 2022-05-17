@@ -40,4 +40,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("🗣 Channel", url='https://t.me/gawrproject'),
             ]
                 ]
-            await query.message.edit(START_MSG, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="hai saya adalah sleazy bot", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
